@@ -5,9 +5,11 @@ def main():
 def grocerys():
     item_list = {}
     while True:
-        item = input("").title()
 
         try:
+
+            item = input("").title()
+
             if item in item_list:
                 item_list[item] = item_list[item] + 1
 
@@ -16,6 +18,7 @@ def grocerys():
             
         except EOFError:
             show_list(item_list)
+            break
 
         except KeyError:
             continue
