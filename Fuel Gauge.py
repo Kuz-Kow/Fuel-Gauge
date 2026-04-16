@@ -16,7 +16,7 @@ def amount():
             y = int(fraction[2])
             result = int(x/y * 100)
             if(result > 100):
-                continue
+                raise ValueError()
 
             return check_result(result)
 
